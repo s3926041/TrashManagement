@@ -15,16 +15,28 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app requires camera access to take photos.",
+        "NSMicrophoneUsageDescription": "This app requires microphone access to record audio with videos.",
+        "NSPhotoLibraryAddUsageDescription": "This app requires photo library access to save photos and videos."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": ["CAMERA", "RECORD_AUDIO", "WRITE_EXTERNAL_STORAGE"],
+      "package": "com.example.trash",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eula": "https://example.com/eula",
+      "privacyPolicy": "https://example.com/privacy"
     }
   }
 }
